@@ -16,7 +16,7 @@ namespace Bar_Bite.Pages
         public void OnGet()
         {
         }
-        public IActionResult OnPost(Student std)
+        public IActionResult OnPost(Student student)
         {
             return RedirectToPage("Index");
         }
