@@ -1,10 +1,15 @@
+using Bar_Bite.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var app = builder.Build();
+var con =builder.Configuration.GetConnectionString("Default_Connection").ToString();
+builder.Services.AddDbContext<DataDbContext>(options => options.UseSqlServer(con));
 
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
