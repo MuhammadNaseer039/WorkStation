@@ -8,15 +8,14 @@ namespace Bar_Bite.Pages
     public class IndexModel : PageModel
     {
         DataDbContext db;
-        public List<Student> Students { get; set; }
-        public Student Student { get; set; }
+        public List<Student> students { get; set; }
         public IndexModel(DataDbContext _db)
         {
             db = _db;
         }
         public void OnGet()
         {
-            Students=db.Students.ToList();
+            students = db.Students.ToList();
         }
        
     }

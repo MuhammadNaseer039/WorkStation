@@ -277,7 +277,7 @@ $(document).ready(function(){
 						<h2>Manage <b>Employees</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+						<a href="/CreateStudent" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
 					</div>
 				</div>
 			</div>
@@ -292,7 +292,7 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
-					@foreach(var item in Model.Students)
+					@foreach(var item in Model.students)
 						{
 							<tr>
 								
