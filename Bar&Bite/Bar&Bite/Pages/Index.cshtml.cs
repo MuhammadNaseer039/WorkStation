@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Bar_Bite.Data;
+using Bar_Bite.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Bar_Bite.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        DataDbContext db;
+        public List<Student> Students { get; set; }
+        public Student Student { get; set; }
+        public IndexModel(DataDbContext _db)
         {
-            _logger = logger;
+            db = _db;
         }
-
         public void OnGet()
         {
-
+            Students=db.Students.ToList();
         }
+       
     }
 }
