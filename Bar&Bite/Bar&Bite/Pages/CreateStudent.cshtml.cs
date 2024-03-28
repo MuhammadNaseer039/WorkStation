@@ -18,6 +18,8 @@ namespace Bar_Bite.Pages
         }
         public IActionResult OnPost(Student student)
         {
+            db.Students.Add(student);
+            db.SaveChanges();
             return RedirectToPage("Index");
         }
     }
