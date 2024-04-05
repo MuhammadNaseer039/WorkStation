@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Bar_Bite.Pages
 {
-    public class AboutUsModel : PageModel
+    public class DashboardModel : PageModel
     {
         public void OnGet()
         {
